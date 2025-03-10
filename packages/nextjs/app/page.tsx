@@ -1,12 +1,9 @@
 "use client";
 
 import type { NextPage } from "next";
-import { useAccount } from "wagmi";
 import { Address } from "~~/components/scaffold-eth";
 
 const Home: NextPage = () => {
-  const { address: connectedAddress } = useAccount();
-
   return (
     <>
       <div className="flex items-center flex-col flex-grow pt-10 gap-10">
@@ -33,6 +30,20 @@ const Home: NextPage = () => {
           <div className="flex flex-col items-center text-lg font-medium">
             <p>Governer</p>
             <Address address={"0xF4c1B492076A62bd96894B81E0aE1da8f730063e"} />
+          </div>
+        </div>
+
+        <div className="flex justify-center items-center space-x-2 flex-col">
+          <p className="my-2 font-medium text-2xl">Phases</p>
+
+          <div className="flex flex-col items-center text-lg font-medium">
+            <p>Phase 1</p>
+            <p>Reward open source contributions through DAO governance.</p>
+          </div>
+
+          <div className="flex flex-col items-center text-lg font-medium">
+            <p>Phase 2</p>
+            <p>Automate rewards for open source contributions.</p>
           </div>
         </div>
       </div>
