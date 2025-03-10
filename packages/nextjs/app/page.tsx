@@ -20,7 +20,7 @@ const Home: NextPage = () => {
         </div>
 
         <p className="text-center text-lg">
-          We are working to get developers <span className="text-green-500">money</span> for their open source
+          We are working to get developers <span className="text-green-500">paid in money</span> for their open source
           contributions.
         </p>
 
