@@ -8,7 +8,7 @@ const titleTemplate = "%s | Open Source Collective";
 export const getMetadata = ({
   title,
   description,
-  imageRelativePath = "/osc-icon.png",
+  imageRelativePath = "/thumbnail.png",
 }: {
   title: string;
   description: string;
