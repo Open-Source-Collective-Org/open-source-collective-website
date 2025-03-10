@@ -23,7 +23,7 @@ const Home: NextPage = () => {
           <p className="my-2 font-medium text-2xl">News</p>
 
           <div className="flex flex-col items-center text-lg font-medium">
-            <p>Giveth Project Creation & Application to the ENS/Octant Round</p>
+            <p>{"Giveth Project Creation & Application to the ENS/Octant Round"}</p>
             <a href="https://giveth.io/project/open-source-collective" target="#" className="text-blue-500">
               https://giveth.io/project/open-source-collective
             </a>
