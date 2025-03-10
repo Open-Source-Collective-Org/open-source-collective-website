@@ -6,19 +6,23 @@ module.exports = {
   darkMode: ["selector", "[data-theme='dark']"],
   daisyui: {
     themes: [
+        //slate-200: e2e8f0
+        //slate-700: 374151
+        //slate-800: 1E293B
+        //slate-900: 0f172a
       {
         light: {
-          primary: "#93BBFB",
+          primary: "#ffffff",
           "primary-content": "#212638",
-          secondary: "#DAE8FF",
+          secondary: "#ffffff",
           "secondary-content": "#212638",
           accent: "#93BBFB",
           "accent-content": "#212638",
           neutral: "#212638",
           "neutral-content": "#ffffff",
-          "base-100": "#ffffff",
-          "base-200": "#f4f8ff",
-          "base-300": "#DAE8FF",
+          "base-100": "#e2e8f0",
+          "base-200": "#ffffff",
+          "base-300": "#e2e8f0",
           "base-content": "#212638",
           info: "#93BBFB",
           success: "#34EEB6",
@@ -32,17 +36,18 @@ module.exports = {
       },
       {
         dark: {
-          primary: "#212638",
+          primary: "#000000",
           "primary-content": "#F9FBFF",
-          secondary: "#323f61",
+          secondary: "#000000",
           "secondary-content": "#F9FBFF",
           accent: "#4969A6",
           "accent-content": "#F9FBFF",
+          
           neutral: "#F9FBFF",
           "neutral-content": "#385183",
-          "base-100": "#385183",
-          "base-200": "#2A3655",
-          "base-300": "#212638",
+          "base-100": "#374151",
+          "base-200": "#000000",
+          "base-300": "#0f172a",
           "base-content": "#F9FBFF",
           info: "#385183",
           success: "#34EEB6",
