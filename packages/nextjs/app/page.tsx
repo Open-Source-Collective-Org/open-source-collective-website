@@ -20,6 +20,17 @@ const Home: NextPage = () => {
         </p>
 
         <div className="flex justify-center items-center space-x-2 flex-col">
+          <p className="my-2 font-medium text-2xl">News</p>
+
+          <div className="flex flex-col items-center text-lg font-medium">
+            <p>Giveth Project Creation & Application to the ENS/Octant Round</p>
+            <a href="https://giveth.io/project/open-source-collective" target="#" className="text-blue-500">
+              https://giveth.io/project/open-source-collective
+            </a>
+          </div>
+        </div>
+
+        <div className="flex justify-center items-center space-x-2 flex-col">
           <p className="my-2 font-medium text-2xl">Wallets</p>
 
           <div className="flex flex-col items-center text-lg font-medium">
