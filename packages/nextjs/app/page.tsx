@@ -46,6 +46,24 @@ const Home: NextPage = () => {
             <p>Automate rewards for open source contributions.</p>
           </div>
         </div>
+
+        <div className="flex justify-center items-center space-x-2 flex-col">
+          <p className="my-2 font-medium text-2xl">Eligible Repositories</p>
+
+          <div className="flex flex-col items-center text-lg font-medium">
+            <p>Scaffold-ETH 2</p>
+            <a href="https://github.com/scaffold-eth/scaffold-eth-2" target="#" className="text-blue-500">
+              https://github.com/scaffold-eth/scaffold-eth-2
+            </a>
+          </div>
+
+          <div className="flex flex-col items-center text-lg font-medium">
+            <p>Stand With Crypto</p>
+            <a href="https://github.com/Stand-With-Crypto/swc-web" target="#" className="text-blue-500">
+              https://github.com/Stand-With-Crypto/swc-web
+            </a>
+          </div>
+        </div>
       </div>
     </>
   );
