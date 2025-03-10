@@ -51,6 +51,17 @@ const Home: NextPage = () => {
           <p className="my-2 font-medium text-2xl">Eligible Repositories</p>
 
           <div className="flex flex-col items-center text-lg font-medium">
+            <p>Open Source Collective</p>
+            <a
+              href="https://github.com/JacobHomanics/open-source-collective-website"
+              target="#"
+              className="text-blue-500"
+            >
+              https://github.com/JacobHomanics/open-source-collective-website
+            </a>
+          </div>
+
+          <div className="flex flex-col items-center text-lg font-medium">
             <p>Scaffold-ETH 2</p>
             <a href="https://github.com/scaffold-eth/scaffold-eth-2" target="#" className="text-blue-500">
               https://github.com/scaffold-eth/scaffold-eth-2
