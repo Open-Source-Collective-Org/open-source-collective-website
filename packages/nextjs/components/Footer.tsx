@@ -1,5 +1,7 @@
 import React from "react";
 import Link from "next/link";
+import { faDiscord, faGithub } from "@fortawesome/free-brands-svg-icons";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { hardhat } from "viem/chains";
 import { CurrencyDollarIcon, MagnifyingGlassIcon } from "@heroicons/react/24/outline";
 import { HeartIcon } from "@heroicons/react/24/outline";
@@ -69,6 +71,10 @@ export const Footer = () => {
                 <span className="link">Jacob Homanics</span>
               </a>
             </div>
+            <span>·</span>
+            <a href="https://discord.gg/fWr7JUwy" target="#">
+              <FontAwesomeIcon icon={faDiscord} />
+            </a>
           </div>
         </ul>
       </div>
