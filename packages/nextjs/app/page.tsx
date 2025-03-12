@@ -26,7 +26,7 @@ const Home: NextPage = () => {
           contributions.
         </p>
 
-        <div className="flex justify-center items-center space-x-2 flex-col bg-base-100 rounded-lg p-4">
+        <div className="w-80 md:w-96 flex justify-center items-center space-x-2 flex-col bg-base-100 rounded-lg p-4">
           <p className="my-2 font-medium text-2xl">News</p>
 
           <div className="flex flex-col items-center text-lg font-medium">
@@ -37,7 +37,7 @@ const Home: NextPage = () => {
           </div>
         </div>
 
-        <div className="flex justify-center items-center space-x-2 flex-col bg-base-100 rounded-lg p-4">
+        <div className="w-80 md:w-96 flex justify-center items-center space-x-2 flex-col bg-base-100 rounded-lg p-4">
           <p className="my-2 font-medium text-2xl">Wallets</p>
 
           <div className="flex flex-col items-center text-lg font-medium">
@@ -51,7 +51,7 @@ const Home: NextPage = () => {
           </div>
         </div>
 
-        <div className="flex justify-center items-center space-x-2 flex-col bg-base-100 rounded-lg p-4">
+        <div className="w-80 md:w-96 flex justify-center items-center space-x-2 flex-col bg-base-100 rounded-lg p-4">
           <p className="my-2 font-medium text-2xl">Phases</p>
 
           <div className="flex flex-col items-center text-lg font-medium">
@@ -65,7 +65,7 @@ const Home: NextPage = () => {
           </div>
         </div>
 
-        <div className="flex justify-center items-center space-x-2 flex-col bg-base-100 rounded-lg p-4">
+        <div className="w-80 md:w-96 flex justify-center items-center space-x-2 flex-col bg-base-100 rounded-lg p-4">
           <p className="my-2 font-medium text-2xl">Eligible Repositories</p>
 
           <div className="flex flex-col items-center text-lg font-medium">
@@ -94,7 +94,10 @@ const Home: NextPage = () => {
           </div>
         </div>
 
-        <Accordion allowMultipleExpanded className="w-96 flex flex-col items-center bg-base-100 rounded-lg p-4 gap-4">
+        <Accordion
+          allowMultipleExpanded
+          className="w-80 md:w-96 flex flex-col items-center bg-base-100 rounded-lg p-4 gap-4"
+        >
           FAQ
           <AccordionItem>
             <AccordionItemHeading className="flex justify-center">
