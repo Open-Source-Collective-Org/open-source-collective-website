@@ -1,5 +1,8 @@
 "use client";
 
+import { useEffect, useState } from "react";
+import { Client, create } from "@web3-storage/w3up-client";
+// import { Account } from "@web3-storage/w3up-client/account";
 import type { NextPage } from "next";
 import {
   Accordion,
@@ -11,6 +14,50 @@ import {
 import { Address } from "~~/components/scaffold-eth";
 
 const Home: NextPage = () => {
+  const [client, setClient] = useState<Client>();
+  // const [account, setAccount] = useState<Account>();
+
+  useEffect(() => {
+    async function get() {
+      const client = await create();
+      setClient(client);
+    }
+    get();
+  }, []);
+
+  async function login(event: React.FormEvent<HTMLFormElement>) {
+    event.preventDefault();
+    const formData = new FormData(event.currentTarget);
+    const data = {
+      name: formData.get("name") as string,
+      description: formData.get("description") as string,
+    };
+    console.log(data); // Logs { name: "The Code Wranglers...", description: "We write efficient and secure code..." }
+
+    console.log("here ye");
+    if (!client) {
+      console.log("here ye 2");
+      return;
+    }
+
+    console.log("here ye 3");
+
+    const account = await client.login("homanicsjake@gmail.com");
+    console.log(account);
+    await account.plan.wait();
+
+    console.log(account);
+    // setAccount(account);
+
+    await client.setCurrentSpace(`did:key:z6Mkoja4t3AJJGAxew1NNYhhvhpnc9RmS8JkKNVpoLnZFTB5`);
+
+    const files = [new File([JSON.stringify(data)], "metadata.json")];
+
+    const directoryCid = await client.uploadDirectory(files);
+
+    console.log(directoryCid.toString());
+  }
+
   return (
     <>
       <div className="flex items-center flex-col flex-grow pt-10 gap-10">
@@ -20,6 +67,15 @@ const Home: NextPage = () => {
             <span className="block text-4xl font-bold">Open Source Collective</span>
           </h1>
         </div>
+
+        <form onSubmit={login}>
+          <input placeholder="The Code Wranglers..." name="name" />
+          <textarea
+            placeholder="We write efficient and secure code. Guild meetings every Tues/Thurs 7pm in our discord..."
+            name="description"
+          />
+          <button className="btn btn-sm">Create</button>
+        </form>
 
         <p className="text-center text-lg">
           We are working to get developers <span className="text-green-500">paid in money</span> for their open source
