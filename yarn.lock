@@ -3470,6 +3470,7 @@ __metadata:
     react-copy-to-clipboard: ~5.1.0
     react-dom: ~18.3.1
     react-hot-toast: ~2.4.0
+    react-images-uploading: ^3.1.7
     tailwindcss: ~3.4.11
     type-fest: ~4.26.1
     typescript: <5.6.0
@@ -13419,6 +13420,16 @@ __metadata:
     react: ">=16"
     react-dom: ">=16"
   checksum: 3e337816db574782454bf09c63a8aca546bf9c5be3f83d0494d24bdcfd97ca2db64d4c151c4ab0184d2342d7a7226403e6812e70caf03c8b55a07787bb4ad0f2
+  languageName: node
+  linkType: hard
+
+"react-images-uploading@npm:^3.1.7":
+  version: 3.1.7
+  resolution: "react-images-uploading@npm:3.1.7"
+  peerDependencies:
+    react: ">=16.8.0"
+    react-dom: ">=16.8.0"
+  checksum: c8d465dcb72072119e172497fa157a46b333e66052b0d3cf07f399651d67e3d1e058394938d896a9d82d6b4c47af393a3caab23007d38d37b77b733625ed9d24
   languageName: node
   linkType: hard
 

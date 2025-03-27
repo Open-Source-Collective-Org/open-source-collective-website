@@ -11,6 +11,7 @@ import {
   AccordionItemHeading,
   AccordionItemPanel,
 } from "react-accessible-accordion";
+import ImageUploading, { ImageListType, ImageType } from "react-images-uploading";
 import { Address } from "~~/components/scaffold-eth";
 
 const Home: NextPage = () => {
@@ -31,32 +32,33 @@ const Home: NextPage = () => {
     const data = {
       name: formData.get("name") as string,
       description: formData.get("description") as string,
+      image: "",
     };
-    console.log(data); // Logs { name: "The Code Wranglers...", description: "We write efficient and secure code..." }
 
-    console.log("here ye");
     if (!client) {
-      console.log("here ye 2");
       return;
     }
 
-    console.log("here ye 3");
-
     const account = await client.login("homanicsjake@gmail.com");
-    console.log(account);
     await account.plan.wait();
-
-    console.log(account);
-    // setAccount(account);
 
     await client.setCurrentSpace(`did:key:z6Mkoja4t3AJJGAxew1NNYhhvhpnc9RmS8JkKNVpoLnZFTB5`);
 
-    const files = [new File([JSON.stringify(data)], "metadata.json")];
+    const cid2 = images[0].file && (await client.uploadFile(images[0].file));
 
-    const directoryCid = await client.uploadDirectory(files);
+    data.image = "ipfs.io/ipfs/" + cid2;
 
-    console.log(directoryCid.toString());
+    const cid1 = await client.uploadFile(new File([JSON.stringify(data)], "metadata.json"));
+
+    console.log(cid1.toString());
   }
+
+  const [images, setImages] = useState<ImageType[]>([]);
+  const maxNumber = 1;
+
+  const onChange = (imageList: ImageListType) => {
+    setImages(imageList as ImageType[]);
+  };
 
   return (
     <>
@@ -74,6 +76,38 @@ const Home: NextPage = () => {
             placeholder="We write efficient and secure code. Guild meetings every Tues/Thurs 7pm in our discord..."
             name="description"
           />
+          <ImageUploading multiple value={images} onChange={onChange} maxNumber={maxNumber}>
+            {({ imageList, onImageUpload, onImageRemoveAll, onImageUpdate, onImageRemove, isDragging, dragProps }) => (
+              // write your building UI
+              <div className="upload__image-wrapper">
+                <button
+                  type="button"
+                  style={isDragging ? { color: "red" } : undefined}
+                  onClick={onImageUpload}
+                  {...dragProps}
+                >
+                  Click or Drop here
+                </button>
+                &nbsp;
+                <button type="button" onClick={onImageRemoveAll}>
+                  Remove all images
+                </button>
+                {imageList.map((image, index) => (
+                  <div key={index} className="image-item">
+                    <img src={image.dataURL} alt="" width="100" />
+                    <div className="image-item__btn-wrapper">
+                      <button type="button" onClick={() => onImageUpdate(index)}>
+                        Update
+                      </button>
+                      <button type="button" onClick={() => onImageRemove(index)}>
+                        Remove
+                      </button>
+                    </div>
+                  </div>
+                ))}
+              </div>
+            )}
+          </ImageUploading>
           <button className="btn btn-sm">Create</button>
         </form>
 
