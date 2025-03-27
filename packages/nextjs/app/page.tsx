@@ -3,15 +3,16 @@
 import { faDiscord, faTelegram } from "@fortawesome/free-brands-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import type { NextPage } from "next";
-import {
-  Accordion,
-  AccordionItem,
-  AccordionItemButton,
-  AccordionItemHeading,
-  AccordionItemPanel,
-} from "react-accessible-accordion";
-import { ChevronDownIcon } from "@heroicons/react/20/solid";
-import { Address, Balance } from "~~/components/scaffold-eth";
+
+// import {
+//   Accordion,
+//   AccordionItem,
+//   AccordionItemButton,
+//   AccordionItemHeading,
+//   AccordionItemPanel,
+// } from "react-accessible-accordion";
+// import { ChevronDownIcon } from "@heroicons/react/20/solid";
+// import { Address, Balance } from "~~/components/scaffold-eth";
 
 const Home: NextPage = () => {
   return (
