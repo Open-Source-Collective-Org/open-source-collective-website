@@ -1,5 +1,7 @@
 "use client";
 
+import { faDiscord, faTelegram } from "@fortawesome/free-brands-svg-icons";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import type { NextPage } from "next";
 import {
   Accordion,
@@ -8,7 +10,8 @@ import {
   AccordionItemHeading,
   AccordionItemPanel,
 } from "react-accessible-accordion";
-import { Address } from "~~/components/scaffold-eth";
+import { ChevronDownIcon } from "@heroicons/react/20/solid";
+import { Address, Balance } from "~~/components/scaffold-eth";
 
 const Home: NextPage = () => {
   return (
@@ -21,12 +24,33 @@ const Home: NextPage = () => {
           </h1>
         </div>
 
-        <p className="text-center text-lg">
+        <div className="flex flex-col items-center">
+          <p className="text-xl font-semibold">Build your portfolio</p>
+          <p className="text-xl font-semibold">Advance technology</p>
+          <p className="text-xl font-semibold">Network with professionals</p>
+          <p className="text-xl font-semibold">Improve your skills</p>
+          <p className="text-xl font-semibold">Get paid</p>
+        </div>
+
+        <div className="flex flex-col items-center text-4xl font-bold">
+          <p>Join the community</p>
+          <div className="flex gap-4">
+            <a href="https://discord.gg/fWr7JUwy" target="#">
+              <FontAwesomeIcon icon={faDiscord} className="w-10 h-10" />
+            </a>
+
+            <a href="https://t.me/+sYYxtfWNQJM0MWQx" target="#">
+              <FontAwesomeIcon icon={faTelegram} className="w-10 h-10" />
+            </a>
+          </div>
+        </div>
+
+        {/* <p className="text-center text-lg">
           We are working to get developers <span className="text-green-500">paid in money</span> for their open source
           contributions.
-        </p>
+        </p> */}
 
-        <div className="w-80 md:w-96 flex justify-center items-center space-x-2 flex-col bg-base-100 rounded-lg p-4">
+        {/* <div className="w-80 md:w-96 flex justify-center items-center space-x-2 flex-col bg-base-100 rounded-lg p-4">
           <p className="my-2 font-medium text-2xl">News</p>
 
           <div className="flex flex-col items-center text-lg font-medium">
@@ -43,15 +67,17 @@ const Home: NextPage = () => {
           <div className="flex flex-col items-center text-lg font-medium">
             <p>Treasury</p>
             <Address address={"0xa3cE7B7a488Db87c8f238D5515351Ec4E1002b13"} />
+            <Balance address={"0xa3cE7B7a488Db87c8f238D5515351Ec4E1002b13"} />
           </div>
 
           <div className="flex flex-col items-center text-lg font-medium">
             <p>Governer</p>
             <Address address={"0xF4c1B492076A62bd96894B81E0aE1da8f730063e"} />
+            <Balance address={"0xa3cE7B7a488Db87c8f238D5515351Ec4E1002b13"} />
           </div>
-        </div>
+        </div> */}
 
-        <div className="w-80 md:w-96 flex justify-center items-center space-x-2 flex-col bg-base-100 rounded-lg p-4">
+        {/* <div className="w-80 md:w-96 flex justify-center items-center space-x-2 flex-col bg-base-100 rounded-lg p-4">
           <p className="my-2 font-medium text-2xl">Phases</p>
 
           <div className="flex flex-col items-center text-lg font-medium">
@@ -63,9 +89,9 @@ const Home: NextPage = () => {
             <p>Phase 2</p>
             <p>Automate rewards for open source contributions.</p>
           </div>
-        </div>
+        </div> */}
 
-        <div className="w-80 md:w-96 flex justify-center items-center space-x-2 flex-col bg-base-100 rounded-lg p-4">
+        {/* <div className="w-80 md:w-96 flex justify-center items-center space-x-2 flex-col bg-base-100 rounded-lg p-4">
           <p className="my-2 font-medium text-2xl">Eligible Repositories</p>
 
           <div className="flex flex-col items-center text-lg font-medium">
@@ -92,16 +118,15 @@ const Home: NextPage = () => {
               https://github.com/Stand-With-Crypto/swc-web
             </a>
           </div>
-        </div>
+        </div> */}
 
-        <Accordion
-          allowMultipleExpanded
-          className="w-80 md:w-96 flex flex-col items-center bg-base-100 rounded-lg p-4 gap-4"
-        >
-          FAQ
+        {/* <Accordion allowMultipleExpanded className="flex flex-col items-center p-4 gap-4">
+          <p className="text-4xl font-semibold">FAQ</p>
           <AccordionItem>
             <AccordionItemHeading className="flex justify-center">
-              <AccordionItemButton className="btn btn-sm">Who?</AccordionItemButton>
+              <AccordionItemButton className="text-3xl">
+                <p></p>Who?
+              </AccordionItemButton>
             </AccordionItemHeading>
             <AccordionItemPanel>
               <p className="text-center">
@@ -113,7 +138,7 @@ const Home: NextPage = () => {
           </AccordionItem>
           <AccordionItem>
             <AccordionItemHeading className="flex justify-center">
-              <AccordionItemButton className="btn btn-sm">What?</AccordionItemButton>
+              <AccordionItemButton className="text-3xl">What?</AccordionItemButton>
             </AccordionItemHeading>
             <AccordionItemPanel>
               <p className="text-center">
@@ -125,7 +150,7 @@ const Home: NextPage = () => {
           </AccordionItem>
           <AccordionItem>
             <AccordionItemHeading className="flex justify-center">
-              <AccordionItemButton className="btn btn-sm">Why?</AccordionItemButton>
+              <AccordionItemButton className="text-3xl">Why?</AccordionItemButton>
             </AccordionItemHeading>
             <AccordionItemPanel>
               <p className="text-center">
@@ -137,7 +162,9 @@ const Home: NextPage = () => {
           </AccordionItem>
           <AccordionItem>
             <AccordionItemHeading className="flex justify-center">
-              <AccordionItemButton className="btn btn-sm">Where?</AccordionItemButton>
+              <AccordionItemButton className="text-3xl flex">
+                <p>Where?</p> <ChevronDownIcon className="w-16 h-16" />
+              </AccordionItemButton>
             </AccordionItemHeading>
             <AccordionItemPanel>
               <p className="text-center">{"Online. Github. In your heart. Everywhere."}</p>
@@ -145,7 +172,7 @@ const Home: NextPage = () => {
           </AccordionItem>
           <AccordionItem>
             <AccordionItemHeading className="flex justify-center">
-              <AccordionItemButton className="btn btn-sm">How?</AccordionItemButton>
+              <AccordionItemButton className="text-3xl">How?</AccordionItemButton>
             </AccordionItemHeading>
             <AccordionItemPanel>
               <p className="text-center">
@@ -157,7 +184,7 @@ const Home: NextPage = () => {
           </AccordionItem>
           <AccordionItem>
             <AccordionItemHeading className="flex justify-center">
-              <AccordionItemButton className="btn btn-sm">When?</AccordionItemButton>
+              <AccordionItemButton className="text-3xl">When?</AccordionItemButton>
             </AccordionItemHeading>
             <AccordionItemPanel>
               <p className="text-center">
@@ -167,7 +194,7 @@ const Home: NextPage = () => {
               </p>
             </AccordionItemPanel>
           </AccordionItem>
-        </Accordion>
+        </Accordion> */}
       </div>
     </>
   );

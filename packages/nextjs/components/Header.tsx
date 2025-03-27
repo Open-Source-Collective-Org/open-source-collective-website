@@ -20,6 +20,18 @@ export const menuLinks: HeaderMenuLink[] = [
     label: "Home",
     href: "/",
   },
+  // {
+  //   label: "News",
+  //   href: "/news",
+  // },
+  {
+    label: "Wallets",
+    href: "/wallets",
+  },
+  // {
+  //   label: "Eligible Repositories",
+  //   href: "/eligible-repositories",
+  // },
 
   // {
   //   label: "Debug Contracts",

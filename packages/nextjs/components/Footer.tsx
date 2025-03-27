@@ -1,6 +1,6 @@
 import React from "react";
 import Link from "next/link";
-import { faDiscord } from "@fortawesome/free-brands-svg-icons";
+import { faDiscord, faTelegram } from "@fortawesome/free-brands-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { hardhat } from "viem/chains";
 import { CurrencyDollarIcon, MagnifyingGlassIcon } from "@heroicons/react/24/outline";
@@ -74,6 +74,10 @@ export const Footer = () => {
             <span>·</span>
             <a href="https://discord.gg/fWr7JUwy" target="#">
               <FontAwesomeIcon icon={faDiscord} />
+            </a>
+
+            <a href="https://t.me/+sYYxtfWNQJM0MWQx" target="#">
+              <FontAwesomeIcon icon={faTelegram} />
             </a>
           </div>
         </ul>
