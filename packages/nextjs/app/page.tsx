@@ -22,8 +22,8 @@ const Home: NextPage = () => {
       <div className="flex items-center flex-col flex-grow pt-10 gap-10">
         <div className="px-5">
           <h1 className="text-center">
-            <span className="block text-2xl mb-2">Welcome to the</span>
             <span className="block text-4xl font-bold">Open Source Collective</span>
+            <span className="block text-2xl mb-2">Welcome to your home as an open source builder.</span>
           </h1>
         </div>
 
