@@ -1,8 +1,10 @@
 "use client";
 
+import Image from "next/image";
 import { faDiscord, faTelegram } from "@fortawesome/free-brands-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import type { NextPage } from "next";
+import scoutGameLogo from "~~/public/scout-game-logo.png";
 
 // import {
 //   Accordion,
@@ -35,13 +37,17 @@ const Home: NextPage = () => {
 
         <div className="flex flex-col items-center text-4xl font-bold">
           <p>Join the community</p>
-          <div className="flex gap-4">
+          <div className="flex gap-4 items-center">
             <a href="https://discord.gg/fWr7JUwy" target="#">
               <FontAwesomeIcon icon={faDiscord} className="w-10 h-10" />
             </a>
 
             <a href="https://t.me/+sYYxtfWNQJM0MWQx" target="#">
               <FontAwesomeIcon icon={faTelegram} className="w-10 h-10" />
+            </a>
+
+            <a href="https://scoutgame.xyz" target="#">
+              <Image width={128} height={528} src={scoutGameLogo} alt="Scout Game" />
             </a>
           </div>
         </div>
