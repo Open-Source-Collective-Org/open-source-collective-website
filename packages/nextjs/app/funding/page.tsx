@@ -13,6 +13,9 @@ const Funding: NextPage = () => {
             <p>{"Grants Programs (Gitcoin, Giveth, Octant)"}</p>
             <p>OSC</p>
             <p>ScoutGame</p>
+            <p>Hackathons</p>
+            <p>{"Bounties/Bounty Programs"}</p>
+            <p>BountyCaster</p>
           </div>
         </div>
       </div>
