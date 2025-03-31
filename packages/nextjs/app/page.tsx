@@ -38,7 +38,7 @@ const Home: NextPage = () => {
         <div className="flex flex-col items-center text-4xl font-bold">
           <p>Join the community</p>
           <div className="flex gap-4 items-center">
-            <a href="https://discord.gg/fWr7JUwy" target="#">
+            <a href="https://discord.gg/Pd7en6YzQN" target="#">
               <FontAwesomeIcon icon={faDiscord} className="w-10 h-10" />
             </a>
 
