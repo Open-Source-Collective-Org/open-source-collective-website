@@ -1,8 +1,10 @@
 export const articles = [
   {
-    title: "OSC joins the Giveth ENS/Octant Round!",
-    links: ["https://giveth.io/project/open-source-collective"],
-    date: "3/14/25",
+    title: "OSC joins GG23 OSS - dApps and Apps Grant Round!",
+    links: [
+      "https://explorer.gitcoin.co/#/projects/0xc58063d70053f30766c3883f041d29bfe92aaccb12218d15d58e3953024aff8e",
+    ],
+    date: "4/8/25",
   },
   {
     title: "Vitalik Calls for more discussions about open source funding",
@@ -13,33 +15,11 @@ export const articles = [
     ],
     date: "3/29/25",
   },
-  // <>
-  //   <div className="m-4">
-  //     <p className="text-center font-semibold text-xl">{"OSC joins the Giveth ENS/Octant Round!"}</p>
-  //     <p className="text-center">{"3/14/25"}</p>
-  //   </div>
-
-  // </>
-  // <>
-  //   <div className="m-4">
-  //     <p className="text-center font-semibold text-xl">
-  //       {"Vitalik Calls for more discussions about open source funding"}
-  //     </p>
-  //     <p className="text-center">{"3/29/25"}</p>
-  //   </div>
-
-  //   <a href="https://vitalik.eth.limo/general/2025/03/29/pubos.html" target="#" className="text-blue-500 text-lg">
-  //     Link 1
-  //   </a>
-
-  //   <a href="https://warpcast.com/vitalik.eth/0xcf151a37" target="#" className="text-blue-500 text-lg">
-  //     Link 2
-  //   </a>
-
-  //   <a href="https://x.com/VitalikButerin/status/1905732523256357056" target="#" className="text-blue-500 text-lg">
-  //     Link 3
-  //   </a>
-  // </>,
+  {
+    title: "OSC joins the Giveth ENS/Octant Round!",
+    links: ["https://giveth.io/project/open-source-collective"],
+    date: "3/14/25",
+  },
 ];
 
 export default articles;
